@@ -16,6 +16,10 @@ print "Sending message..."
 
 uri = URI("http://localhost:9292")
 
+
+response = Net::HTTP.post_form(uri, 'to' => to, 'from' => from, 'content' => content)
+#running that line is the request and returns the response
+
 # TODO: Post the message to the server
 # How do you submit a POST request using Ruby?
 # Maybe a library called Net::HTTP has a post method? Google.
